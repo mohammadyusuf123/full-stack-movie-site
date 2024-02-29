@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import "./style.scss";
 
 const Genres = ({ data }) => {
+    
     const { genres } = useSelector((state) => state.home);
 
     return (
@@ -14,6 +15,8 @@ const Genres = ({ data }) => {
                 return (
                     <div key={g} className="genre">
                         {genres[g]?.name}
+                        
+                      
                     </div>
                 );
             })}
